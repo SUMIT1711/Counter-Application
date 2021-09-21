@@ -39,7 +39,7 @@ void main(List<String> arguments) {
     1. Increment
     2. Decrement
     3. Multiply 
-    4. Reminder
+    4. Remainder
     5. Divide
     6. Change User Name
     10. Stop the operation
@@ -71,11 +71,14 @@ void main(List<String> arguments) {
       case 4:
          remainderCounter(counter: lbsimCounter, remaindervalue: operationValue);
          break;
-
       case 5:
+         divideCounter(counter: lbsimCounter, dividevalue: operationValue);
+         break;
+
+      case 6:
         changeUserName(counter: lbsimCounter);
         break;
-      case 6:
+      case 7:
         stop = true;
         break;
       default:
@@ -118,6 +121,12 @@ void remainderCounter(
   counter.count = counter.count % remaindervalue;
 
   }
+void divideCounter(
+  {required LBSIMCounter counter, required int dividevalue}) {
+  counter.count = counter.count ~/ dividevalue;
+
+  }
+
 
 
 
